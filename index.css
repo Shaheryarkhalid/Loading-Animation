@@ -1,0 +1,44 @@
+*{
+    box-sizing:border-box;
+    padding:0;
+    margin:0;
+}
+section{
+    height:100vh;
+    width:100%;
+    background-color: #4071ed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section .content-wrapper{
+    height:200px;
+    width:200px;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content-wrapper .animation{
+    height: 100px;
+    width:100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.animation span{
+    position:absolute;
+    height:10px;
+    width:10px;
+    background-color: #fff;
+    border-radius: 50px;
+    transform: rotate(calc((360deg / 20) * var(--var))) translate(50px);
+    opacity: 0;
+    animation: ani-ani 2s ease infinite;
+    animation-delay: calc(var(--var) * 0.1s);
+}
+@keyframes ani-ani{
+    0%{opacity: 0;}
+    50%{opacity: 1;}
+    100%{opacity: 0;}
+}
